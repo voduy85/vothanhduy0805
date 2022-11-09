@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Transport</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>Transport</h1>
+    <a href="form-add"><button>Add Transport</button></a><br><br>
+    <table border="1">
+      <tr>
+      <th>ID</th>
+      <th>Content</th>
+      <th>Picture</th>
+      <th>Point</th>
+      <th>ACTION</th>
+      </tr>
+      <% vanchuyens.forEach(item => { %>
+       <tr>
+        <td><%= item._id %> </td>
+        <td><%= item.Content %> </td>
+        <td><%= item.Picture %> </td>
+        <td><%= item.Point %> </td>
+        <td><a href="/form-update/<%= item._id %>">Update</a>||<a href="/form-delete/<%= item._id %>">Delete</a></td>
+      </tr>
+      <% }) %>
+    </table>
+  </body>
+
+</html>
